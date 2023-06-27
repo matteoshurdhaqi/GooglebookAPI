@@ -72,18 +72,19 @@ function getBooks(booktitle: string) {
 }
 function displayBook(book : Book){
     const bookTpl = `
-    <div class="card" style="width: 15rem;">
-            <img class="img-fluid" src="${book.thumbnail}" alt="${book.title}" style="max-height:15rem">
-        <div class="px-5"></div>
-            <h5>${book.title}</h5>
-            <p class="py-2">${book.description || ''}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="card h-100">
+        <img class="card-img-top card-thumbnail" src="${book.thumbnail}" alt="${book.title}"">
+        <h5 class="card-title py-2">${book.title}</h5>
+        <div class="card-body">
+            
+            <p class="card-text overflow-auto">${book.description || " "}</p>
+            
         </div>
-        
+        <button class="btn btn-primary py-2">Vai al libro</button>
     </div>
 `;
 const div = document.createElement('div');
-div.setAttribute('class','col-md-3');
+div.setAttribute('class','col-sm-6 col-md-4 col-lg-3');
 div.innerHTML = bookTpl;
 const books = document.querySelector('#books');
 if(books){

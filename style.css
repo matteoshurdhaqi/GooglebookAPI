@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    padding: 0 !important;
+    flex-grow: 3;
+  }
+  .card-thumbnail{
+    max-height: 150px;
+  }
+  
+  .overflow-auto {
+    max-height: 80px; /* Adjust the maximum height as needed */
+    
+  }
+  
